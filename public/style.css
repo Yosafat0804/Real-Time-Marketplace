@@ -1,0 +1,134 @@
+/* GENERAL LAYOUT */
+/* Bagian ini mengatur tampilan dasar seluruh halaman:
+   - memakai font yang enak dibaca
+   - latar belakang warna abu muda
+   - serta memberi jarak agar konten tidak terlalu mepet ke tepi layar */
+body {
+    font-family: "Segoe UI", Arial, sans-serif; /* Font utama halaman */
+    background: #f5f7fa; /* Warna latar belakang */
+    margin: 0; /* Hilangkan margin bawaan browser */
+    padding: 30px; /* Beri ruang di sekeliling konten */
+}
+
+.container {
+    max-width: 900px; /* Membatasi lebar konten agar tidak terlalu lebar di layar besar */
+    margin: auto; /* Menempatkan konten di tengah */
+}
+
+/* TITLES */
+/* Mengatur tampilan judul besar agar terlihat rapi dan fokus ke tengah */
+.title {
+    text-align: center; /* Posisikan teks ke tengah */
+    margin-bottom: 25px; /* Jarak bawah judul */
+    font-size: 32px; /* Membuat judul cukup besar */
+    color: #333; /* Warna abu gelap agar nyaman dibaca */
+}
+
+/* CARD */
+/* Bagian ini membuat kotak putih (card) dengan sudut melengkung dan bayangan,
+   supaya setiap bagian konten terlihat seperti blok terpisah dan lebih rapi */
+.card {
+    background: #fff; /* Warna putih */
+    padding: 20px 25px; /* Ruang dalam card */
+    border-radius: 12px; /* Membuat sudut melengkung */
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.12); /* Bayangan lembut */
+    margin-bottom: 30px; /* Jarak antar card */
+}
+
+/* Judul kecil dalam card */
+.card h2 {
+    margin-top: 0; /* Hilangkan jarak di atas */
+    margin-bottom: 15px; /* Jarak bawah */
+}
+
+/* FORM INPUT */
+/* Membuat layout input menjadi 3 kolom agar form terlihat lebih rapi dan hemat tempat */
+.form-grid {
+    display: grid; /* Gunakan grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom sama besar */
+    gap: 12px; /* Jarak antar kolom */
+    margin-bottom: 15px; /* Jarak bawah form */
+}
+
+input {
+    padding: 10px; /* Ruang dalam input */
+    border-radius: 8px; /* Input tampil melengkung */
+    border: 1px solid #bbb; /* Garis pinggir abu-abu */
+    font-size: 15px; /* Ukuran teks nyaman dibaca */
+}
+
+/* Efek saat input di-klik/difokuskan agar pengguna tahu fokus aktif ada di mana */
+input:focus {
+    border-color: #4e8cff; /* Border berubah biru */
+    outline: none; /* Hilangkan outline bawaan browser */
+    box-shadow: 0 0 4px rgba(78, 140, 255, 0.6); /* Glow biru halus */
+}
+
+/* BUTTON */
+/* Pengaturan tampilan tombol utama agar terlihat jelas dan mudah diklik */
+.btn {
+    background: #4e8cff; /* Warna biru */
+    color: white; /* Teks putih */
+    padding: 12px 18px; /* Ukuran tombol */
+    font-size: 15px; /* Ukuran teks */
+    border: none; /* Tanpa garis pinggir */
+    border-radius: 8px; /* Sudut melengkung */
+    cursor: pointer; /* Pointer tangan saat hover */
+    transition: 0.25s; /* Animasi halus saat hover */
+}
+
+/* Efek ketika mouse berada di atas tombol */
+.btn:hover {
+    background: #3c6edb; /* Biru sedikit lebih gelap */
+}
+
+/* TABLE */
+/* Mengatur tampilan dasar tabel agar rapi, mudah dibaca, dan jelas pemisah antar barisnya */
+table {
+    width: 100%; /* Lebar penuh */
+    border-collapse: collapse; /* Menggabungkan garis tabel */
+    margin-top: 12px; /* Jarak atas tabel */
+}
+
+th {
+    background: #4e8cff; /* Warna biru untuk header */
+    color: white; /* Teks putih */
+    padding: 12px; /* Ruang di dalam sel */
+    font-size: 16px; /* Ukuran teks header */
+}
+
+td {
+    padding: 12px; /* Ruang di dalam sel */
+    text-align: center; /* Teks di tengah agar lebih konsisten */
+    border-bottom: 1px solid #ddd; /* Garis batas antar baris */
+    font-size: 15px; /* Ukuran teks */
+}
+
+/* Efek warna saat mouse diarahkan ke suatu baris,
+   membuat tabel terasa interaktif dan memudahkan pengguna mengikuti baris yang sedang dibaca */
+tr:hover td {
+    background: #eef4ff; /* Biru sangat muda */
+}
+
+/* DELETE & EDIT BUTTON */
+/* Mengatur tampilan tombol dalam tabel (hapus dan edit) agar berbeda warna sesuai fungsi */
+table button {
+    background: #ff4e4e; /* Warna merah khusus untuk tombol hapus */
+    color: white; /* Teks putih */
+    padding: 8px 12px; /* Ukuran tombol */
+    border: none; /* Hilangkan border */
+    border-radius: 8px; /* Sudut melengkung */
+    cursor: pointer; /* Pointer tangan */
+    transition: 0.25s; /* Animasi hover */
+    margin-right: 5px; /* Jarak antar tombol */
+}
+
+/* Warna hijau khusus untuk tombol edit agar mudah dibedakan dengan tombol hapus */
+.edit-btn {
+    background: #1db954 !important; /* Warna hijau */
+}
+
+/* Efek hover tombol dalam tabel */
+table button:hover {
+    opacity: 0.8; /* Sedikit transparan saat di-hover */
+}

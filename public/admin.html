@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Judul halaman yang tampil di tab browser -->
+    <title>Admin Panel</title>
+
+    <!-- Memuat file CSS untuk tampilan halaman.
+         File style.css berada di folder /public, dan Go akan melayani file ini
+         lewat route /public/... -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Judul besar halaman admin -->
+    <h1 class="title">Admin Panel – Stock Marketplace</h1>
+
+    <!-- ===================================================================
+         FORM UNTUK MENAMBAHKAN ATAU MENGEDIT BARANG
+         -------------------------------------------------------------------
+         Form ini dipakai untuk dua fungsi:
+         1. Menambah data barang baru
+         2. Mengedit data barang yang sudah ada
+         
+         JavaScript akan otomatis mengganti fungsinya sesuai kondisi.
+         =================================================================== -->
+    <div class="card form-card">
+        <h2>Tambah Barang</h2>
+
+        <!-- Form menggunakan grid supaya 3 inputnya sejajar dan rapi -->
+        <div class="form-grid">
+
+            <!-- Input nama barang yang akan disimpan ke database -->
+            <input type="text" id="name" placeholder="Nama Barang">
+
+            <!-- Input harga barang.
+                 Awalnya number, tapi JavaScript akan memperlakukannya sebagai string
+                 supaya format seperti “20.000” tidak diubah oleh browser. -->
+            <input type="number" id="price" placeholder="Harga">
+
+            <!-- Input jumlah/ketersediaan barang -->
+            <input type="number" id="qty" placeholder="Qty">
+        </div>
+
+        <!-- Tombol untuk submit form.
+             JavaScript akan mengganti teks tombol ini:
+             - "Tambah Barang" untuk menambah
+             - "Simpan Perubahan" saat mengedit data -->
+        <button class="btn" onclick="addItem()">Tambah Barang</button>
+    </div>
+
+    <!-- ===================================================================
+         TABEL UNTUK MENAMPILKAN DAFTAR SEMUA BARANG
+         -------------------------------------------------------------------
+         Tabel ini diisi secara otomatis oleh script.js menggunakan data
+         dari backend (GET /items).
+         Tombol edit dan hapus hanya muncul di halaman admin.
+         =================================================================== -->
+    <div class="card">
+        <h2>Daftar Barang</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>   <!-- Nama barang -->
+                    <th>Harga</th>  <!-- Harga barang -->
+                    <th>Qty</th>    <!-- Jumlah barang -->
+                    <th>Aksi</th>   <!-- Tombol Edit dan Hapus -->
+                </tr>
+            </thead>
+
+            <!-- Bagian isi tabel.
+                 Akan di-generate oleh script.js menggunakan DOM. -->
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Memuat file script.js yang berisi logika program:
+     - Mengambil data barang (GET)
+     - Menambah (POST)
+     - Mengedit (PUT)
+     - Menghapus (DELETE)
+     - Menghubungkan WebSocket supaya viewer/admin selalu realtime -->
+<script src="/public/script.js"></script>
+
+</body>
+</html>
