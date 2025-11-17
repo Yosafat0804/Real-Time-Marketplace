@@ -4,46 +4,30 @@
     <meta charset="UTF-8">
     <title>Viewer Panel</title>
 
-    <!-- Menghubungkan file CSS utama untuk mengatur tampilan website,
-         seperti warna, layout, dan gaya tabel -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <!-- Judul utama halaman untuk user yang hanya bisa melihat data -->
     <h1 class="title">Viewer Panel – Stock Marketplace</h1>
 
     <div class="card">
-        <!-- Judul bagian tabel yang menampilkan daftar barang -->
         <h2>Daftar Barang</h2>
 
-        <!-- Tabel ini digunakan untuk menampilkan data barang dari server.
-             Tabel tidak diisi secara manual, tetapi akan terisi otomatis
-             menggunakan JavaScript yang mengambil data dari server. -->
         <table>
             <thead>
                 <tr>
-                    <!-- Kolom pertama untuk menampilkan nama barang -->
                     <th>Nama</th>
-                    <!-- Kolom kedua untuk menampilkan harga barang -->
                     <th>Harga</th>
-                    <!-- Kolom ketiga untuk menampilkan jumlah stok barang -->
                     <th>Qty</th>
                 </tr>
             </thead>
 
-            <!-- Bagian ini akan diisi oleh script.js menggunakan DOM.
-                 Setiap kali ada update data dari server, isi tabel ini akan diperbarui. -->
             <tbody id="data"></tbody>
         </table>
     </div>
 </div>
 
-<!-- Menghubungkan file JavaScript yang mengatur:
-     - pengambilan data dari server
-     - menerima notifikasi perubahan data melalui WebSocket
-     - memperbarui isi tabel secara otomatis -->
 <script src="/public/script.js"></script>
 
 </body>

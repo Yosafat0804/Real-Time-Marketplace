@@ -1,134 +1,109 @@
-/* GENERAL LAYOUT */
-/* Bagian ini mengatur tampilan dasar seluruh halaman:
-   - memakai font yang enak dibaca
-   - latar belakang warna abu muda
-   - serta memberi jarak agar konten tidak terlalu mepet ke tepi layar */
 body {
-    font-family: "Segoe UI", Arial, sans-serif; /* Font utama halaman */
-    background: #f5f7fa; /* Warna latar belakang */
-    margin: 0; /* Hilangkan margin bawaan browser */
-    padding: 30px; /* Beri ruang di sekeliling konten */
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fa; 
+    margin: 0;
+    padding: 30px;
 }
 
 .container {
-    max-width: 900px; /* Membatasi lebar konten agar tidak terlalu lebar di layar besar */
-    margin: auto; /* Menempatkan konten di tengah */
+    max-width: 900px;
+    margin: auto;
 }
 
-/* TITLES */
-/* Mengatur tampilan judul besar agar terlihat rapi dan fokus ke tengah */
 .title {
-    text-align: center; /* Posisikan teks ke tengah */
-    margin-bottom: 25px; /* Jarak bawah judul */
-    font-size: 32px; /* Membuat judul cukup besar */
-    color: #333; /* Warna abu gelap agar nyaman dibaca */
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px;
+    color: #333;
 }
 
-/* CARD */
-/* Bagian ini membuat kotak putih (card) dengan sudut melengkung dan bayangan,
-   supaya setiap bagian konten terlihat seperti blok terpisah dan lebih rapi */
 .card {
-    background: #fff; /* Warna putih */
-    padding: 20px 25px; /* Ruang dalam card */
-    border-radius: 12px; /* Membuat sudut melengkung */
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.12); /* Bayangan lembut */
-    margin-bottom: 30px; /* Jarak antar card */
+    background: #fff; 
+    padding: 20px 25px; 
+    border-radius: 12px; 
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.12); 
+    margin-bottom: 30px;
 }
 
-/* Judul kecil dalam card */
 .card h2 {
-    margin-top: 0; /* Hilangkan jarak di atas */
-    margin-bottom: 15px; /* Jarak bawah */
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
-/* FORM INPUT */
-/* Membuat layout input menjadi 3 kolom agar form terlihat lebih rapi dan hemat tempat */
 .form-grid {
-    display: grid; /* Gunakan grid layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom sama besar */
-    gap: 12px; /* Jarak antar kolom */
-    margin-bottom: 15px; /* Jarak bawah form */
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 12px; 
+    margin-bottom: 15px; 
 }
 
 input {
-    padding: 10px; /* Ruang dalam input */
-    border-radius: 8px; /* Input tampil melengkung */
-    border: 1px solid #bbb; /* Garis pinggir abu-abu */
-    font-size: 15px; /* Ukuran teks nyaman dibaca */
+    padding: 10px; 
+    border-radius: 8px; 
+    border: 1px solid #bbb; 
+    font-size: 15px; 
 }
 
-/* Efek saat input di-klik/difokuskan agar pengguna tahu fokus aktif ada di mana */
 input:focus {
-    border-color: #4e8cff; /* Border berubah biru */
-    outline: none; /* Hilangkan outline bawaan browser */
-    box-shadow: 0 0 4px rgba(78, 140, 255, 0.6); /* Glow biru halus */
+    border-color: #4e8cff; 
+    outline: none; 
+    box-shadow: 0 0 4px rgba(78, 140, 255, 0.6); 
 }
 
-/* BUTTON */
-/* Pengaturan tampilan tombol utama agar terlihat jelas dan mudah diklik */
 .btn {
-    background: #4e8cff; /* Warna biru */
-    color: white; /* Teks putih */
-    padding: 12px 18px; /* Ukuran tombol */
-    font-size: 15px; /* Ukuran teks */
-    border: none; /* Tanpa garis pinggir */
-    border-radius: 8px; /* Sudut melengkung */
-    cursor: pointer; /* Pointer tangan saat hover */
-    transition: 0.25s; /* Animasi halus saat hover */
+    background: #4e8cff; 
+    color: white; 
+    padding: 12px 18px; 
+    font-size: 15px; 
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; 
+    transition: 0.25s; 
 }
 
-/* Efek ketika mouse berada di atas tombol */
 .btn:hover {
-    background: #3c6edb; /* Biru sedikit lebih gelap */
+    background: #3c6edb;
 }
 
-/* TABLE */
-/* Mengatur tampilan dasar tabel agar rapi, mudah dibaca, dan jelas pemisah antar barisnya */
 table {
-    width: 100%; /* Lebar penuh */
-    border-collapse: collapse; /* Menggabungkan garis tabel */
-    margin-top: 12px; /* Jarak atas tabel */
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 12px; 
 }
 
 th {
-    background: #4e8cff; /* Warna biru untuk header */
-    color: white; /* Teks putih */
-    padding: 12px; /* Ruang di dalam sel */
-    font-size: 16px; /* Ukuran teks header */
+    background: #4e8cff; 
+    color: white; 
+    padding: 12px; 
+    font-size: 16px; 
 }
 
 td {
-    padding: 12px; /* Ruang di dalam sel */
-    text-align: center; /* Teks di tengah agar lebih konsisten */
-    border-bottom: 1px solid #ddd; /* Garis batas antar baris */
-    font-size: 15px; /* Ukuran teks */
+    padding: 12px; 
+    text-align: center; 
+    border-bottom: 1px solid #ddd; 
+    font-size: 15px; 
 }
 
-/* Efek warna saat mouse diarahkan ke suatu baris,
-   membuat tabel terasa interaktif dan memudahkan pengguna mengikuti baris yang sedang dibaca */
 tr:hover td {
-    background: #eef4ff; /* Biru sangat muda */
+    background: #eef4ff; 
 }
 
-/* DELETE & EDIT BUTTON */
-/* Mengatur tampilan tombol dalam tabel (hapus dan edit) agar berbeda warna sesuai fungsi */
 table button {
-    background: #ff4e4e; /* Warna merah khusus untuk tombol hapus */
-    color: white; /* Teks putih */
-    padding: 8px 12px; /* Ukuran tombol */
-    border: none; /* Hilangkan border */
-    border-radius: 8px; /* Sudut melengkung */
-    cursor: pointer; /* Pointer tangan */
-    transition: 0.25s; /* Animasi hover */
-    margin-right: 5px; /* Jarak antar tombol */
+    background: #ff4e4e; 
+    color: white; 
+    padding: 8px 12px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: 0.25s; 
+    margin-right: 5px; 
 }
 
-/* Warna hijau khusus untuk tombol edit agar mudah dibedakan dengan tombol hapus */
 .edit-btn {
-    background: #1db954 !important; /* Warna hijau */
+    background: #1db954 !important;
 }
 
-/* Efek hover tombol dalam tabel */
 table button:hover {
-    opacity: 0.8; /* Sedikit transparan saat di-hover */
+    opacity: 0.8;
 }
